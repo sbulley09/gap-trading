@@ -20,12 +20,38 @@ def defineGap(lowT0, highT0, t1Open):
 def calculateGapSize(previousExtreme, currentOpen):
   return (currentOpen  / previousExtreme) - 1
 
-# float closingValue - Value at which the gap will be considered closed
-# float currentExtreme - Highest or Lowest value of the current time period
+# float valueToClose - Value at which the gap will be considered closed
+# float currentMin - Lowest value of the current time period
+# float currentMax - Highest value of the current time period
+# integer gapType - 1 if an up-gap, -1 if a down-gap
 #
 # returns true if the gap has closed, false if it remains open
-def gapClosed(closingValue, currentExtreme):
+def gapClosed(valueToClose, currentMin, currentMax, gapType):
   return false
+
+# Array[Dictionary] inputData - Array of time periods of stock data
+#   each Dictionary contains keys [open, low, high]
+#
+# returns outputData - information regarding gaps that closed and those that didn't
+def process(inputData):
+  # store first element of inputData in variable (Use as "previousPeriod")
+  # for each time period in the inputData (start from second variable)
+    # Check if there's a gap
+    # If there is a gap
+      # Add an object to a list of gaps to monitor
+      # object should contain:
+        # Time Period of gap (use the current index of the for-loop)
+        # Gap Size
+
+
+    # for each gap that we are monitoring
+      # Check if it closes with this current time period's data
+      # if it closes
+        # calculate the number of periods to close
+        # add object to "closed gaps" list (containing gapSize and periodsToClose)
+        # remove the object from the list of gaps we are monitoring
+
+    # Set "previousPeriod" = "currentPeriod"
 
 
 
