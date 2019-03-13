@@ -57,6 +57,3 @@ def process(inputData):
         # remove the object from the list of gaps we are monitoring
 
     # Set "previousPeriod" = "currentPeriod"
-
-
-
