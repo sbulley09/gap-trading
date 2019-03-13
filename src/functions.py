@@ -11,11 +11,9 @@ def defineGap(lowT0, highT0, t1Open):
   # Up Gap: open of T(1) > High of T(0)
   # Down Gap: open of T(1) < Low of T(0)
     if t1Open > highT0:
-        return (1)
+      return (1)
     elif t1Open < lowT0: 
-        return (-1)
-    else 
-
+      return (-1)
   
   return 0
 
